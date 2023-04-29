@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33502.453
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSApi", "CSApi\CSApi.csproj", "{2C6E7A20-CB38-4761-A4A5-75B5AF99262B}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FSDomain", "FSDomain\FSDomain.fsproj", "{276C60F4-0BB5-48E3-8847-2B66B31D4779}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C6E7A20-CB38-4761-A4A5-75B5AF99262B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C6E7A20-CB38-4761-A4A5-75B5AF99262B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C6E7A20-CB38-4761-A4A5-75B5AF99262B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C6E7A20-CB38-4761-A4A5-75B5AF99262B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{276C60F4-0BB5-48E3-8847-2B66B31D4779}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{276C60F4-0BB5-48E3-8847-2B66B31D4779}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{276C60F4-0BB5-48E3-8847-2B66B31D4779}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{276C60F4-0BB5-48E3-8847-2B66B31D4779}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA33ADE5-28AF-4B97-A7A1-14EE106D3815}
+	EndGlobalSection
+EndGlobal
