@@ -6,6 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="Shop\ShopProductModule.fs" />
+    <Compile Include="Shop\ShopOfferModule.fs" />
+    <Compile Include="Shop\ShopBuyerModule.fs" />
+    <Compile Include="Shop\ShopActionModule.fs" />
     <Compile Include="Product.fs" />
     <Compile Include="CompositeTypes.fs" />
     <Compile Include="SimpleTypes.fs" />
