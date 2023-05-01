@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CSApi.DTOs;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CSApi.Controllers
@@ -79,6 +80,39 @@ namespace CSApi.Controllers
             var buyerOwnedProducts = buyer.ownedProducts.Select(p => p.name);
 
             return Ok(buyerOwnedProducts);
+        }
+
+        [HttpGet("School")]
+        public IActionResult GetSchool()
+        {
+            var course1 = CourseModule.createCourse("Curso1");
+            var course2 = CourseModule.createCourse("Curso2");
+
+            var cPriceRanges1 = CourseModule.createCoursePriceRanges(3, 2, 100);
+            var cPriceRanges2 = CourseModule.createCoursePriceRanges(4, 10, 200);
+
+            course1 = CourseModule.addPriceRangesToCourse(course1, cPriceRanges2);
+            course2 = CourseModule.addPriceRangesToCourse(course2, cPriceRanges1);
+
+            var school = SchoolModule.createSchool("Escola 1");
+
+            school = SchoolModule.addCourseToSchool(school, course1);
+            school = SchoolModule.addCourseToSchool(school, course2);
+
+            if(SchoolModule.isValidSchool(school))
+            {
+                var courses = school.courses.Select(c => {
+                    var priceRanges = c.priceRanges.Select(pr => new CoursePriceRangeDto(pr.rangeFrom, pr.rangeTo, pr.price));
+                    return new CourseDto(c.name, priceRanges);
+                });
+
+                var result = new SchoolDto(school.name, courses);
+
+                return Ok(result);
+
+            }
+
+            return Problem();
         }
     }
 }

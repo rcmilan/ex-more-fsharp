@@ -11,6 +11,8 @@ type Course = {
     priceRanges: CoursePriceRange list
 }
 
+let createCourse (name: CourseName) : Course = { name = name; priceRanges = [] }
+
 let createCoursePriceRanges (quantity: int) (interval: int) (price: Price) : CoursePriceRange list =
     let rec generatePriceRanges remaining startRange currentPrice result =
         if remaining <= 0 || not (isPriceValid currentPrice) then
@@ -25,3 +27,6 @@ let createCoursePriceRanges (quantity: int) (interval: int) (price: Price) : Cou
     generatePriceRanges quantity 1 price []
 
 let isValidCourse (course: Course) : bool = hasValidRanges course.priceRanges
+
+let addPriceRangesToCourse (course : Course) (priceRanges : CoursePriceRange list): Course =
+    { course with priceRanges = course.priceRanges @ priceRanges}
