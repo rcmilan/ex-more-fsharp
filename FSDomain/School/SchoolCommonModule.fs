@@ -9,14 +9,6 @@ type PriceRange = {
     price: Price
 }
 
-
-//type CreatePriceRangeFunType = RangeLimit -> int -> Price -> PriceRange
-//let createPriceRange : CreatePriceRangeFunType =
-//    fun (startRange: RangeLimit) ->
-//        fun (interval : int) ->
-//            fun (price : Price) -> { price = price; rangeFrom = startRange; rangeTo = startRange + interval }
-
-
 let createPriceRange (startRange: RangeLimit) (interval: int) (price: Price) : PriceRange =
     { price = price; rangeFrom = startRange; rangeTo = startRange + interval }
 
