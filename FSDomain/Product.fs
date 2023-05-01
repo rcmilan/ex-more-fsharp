@@ -1,6 +1,6 @@
 ﻿module ProductModule
 
-type ProductPrice = 
+type ProductPrice =
     | Price of decimal
     | None
 

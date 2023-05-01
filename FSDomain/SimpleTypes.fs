@@ -14,7 +14,7 @@ let createSpecialName (s : string) = SpecialName(createName s)
 
 let createSpecialNameFromName (n : Name) = SpecialName n
 
-let createOptionalName (s : string) = 
+let createOptionalName (s : string) =
     if s.Length = 0 then None
     else createSpecialName s |> Some
 

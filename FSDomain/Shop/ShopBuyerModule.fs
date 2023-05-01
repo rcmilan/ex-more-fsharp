@@ -11,5 +11,5 @@ type ShopBuyer = {
     ownedProducts: ShopBuyerOwnedProductList
 }
 
-let createNewBuyer (name : string) : ShopBuyer = 
+let createNewBuyer (name : string) : ShopBuyer =
     { name = name; ownedProducts = [] }

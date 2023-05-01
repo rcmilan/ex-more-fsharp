@@ -11,5 +11,5 @@ type ShopOffer = {
     productsIn: ShopOfferProductList
 }
 
-let getOfferProducts (offer : ShopOffer) = 
+let getOfferProducts (offer : ShopOffer) =
     offer.productsIn
