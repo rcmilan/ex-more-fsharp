@@ -72,7 +72,7 @@ namespace CSApi.Controllers
         {
             var buyer = ShopBuyerModule.createNewBuyer("New Buyer");
 
-            var offer = ShopActionModule.offer1;
+            var offer = ShopActionModule.offer3;
 
             buyer = ShopActionModule.addOfferToBuyer(offer, buyer);
 

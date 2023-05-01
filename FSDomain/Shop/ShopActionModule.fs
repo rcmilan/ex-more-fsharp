@@ -11,6 +11,7 @@ let productList : ShopProduct list = [{ name = "product1" }; { name = "product2"
 
 let offer1 : ShopOffer = { name="Offer1"; productsIn = productList}
 let offer2 : ShopOffer = { name="Offer2"; productsIn = [product3; product4]}
+let offer3 : ShopOffer = { offer2 with name = "Offer3"; productsIn = offer1.productsIn @ offer2.productsIn }
 
 let addOfferToBuyer (offer : ShopOffer) (buyer : ShopBuyer) = 
     let offerProducts = getOfferProducts offer
