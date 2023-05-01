@@ -66,5 +66,19 @@ namespace CSApi.Controllers
 
             return Ok();
         }
+
+        [HttpGet("Shop")]
+        public IActionResult GetShop()
+        {
+            var buyer = ShopBuyerModule.createNewBuyer("New Buyer");
+
+            var offer = ShopActionModule.offer1;
+
+            buyer = ShopActionModule.addOfferToBuyer(offer, buyer);
+
+            var buyerOwnedProducts = buyer.ownedProducts.Select(p => p.name);
+
+            return Ok(buyerOwnedProducts);
+        }
     }
 }
